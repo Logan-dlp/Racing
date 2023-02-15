@@ -202,7 +202,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   m_LocalRotation: {x: 0.049511023, y: -0.020413697, z: 0.0010121559, w: 0.9985644}
-  m_LocalPosition: {x: -1.7116992, y: 1.6955411, z: -4.3686466}
+  m_LocalPosition: {x: -1.7116992, y: 1.6955411, z: -5.3975544}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -454,6 +454,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4940309651405069329, guid: cdca8f93b4d347d4f861472200ebd87c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.0289078
+      objectReference: {fileID: 0}
+    - target: {fileID: 5585852433329204080, guid: cdca8f93b4d347d4f861472200ebd87c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.215025
+      objectReference: {fileID: 0}
+    - target: {fileID: 6399784176278119010, guid: cdca8f93b4d347d4f861472200ebd87c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -5.304
+      objectReference: {fileID: 0}
     - target: {fileID: 6399784176278119010, guid: cdca8f93b4d347d4f861472200ebd87c,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -583,6 +598,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Car
+      objectReference: {fileID: 0}
+    - target: {fileID: 8833139297892125192, guid: cdca8f93b4d347d4f861472200ebd87c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -5.304
       objectReference: {fileID: 0}
     - target: {fileID: 8833139297892125192, guid: cdca8f93b4d347d4f861472200ebd87c,
         type: 3}
