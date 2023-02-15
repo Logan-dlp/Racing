@@ -5,11 +5,18 @@ using Cinemachine;
 using UnityEditor.Rendering.LookDev;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Serialization;
 
 public class Controls : MonoBehaviour
 {
     Vector2 moveDirection;
     PlayerInput input;
+
+    public Transform FR;
+    public Transform FL;
+    public Transform RR;
+    public Transform RL;
+    private Vector3 WeelRotation;
 
     public float MaxSpeed = 5;
     float currentSpeed;
@@ -95,6 +102,25 @@ public class Controls : MonoBehaviour
         
         transform.Rotate(0, _rotation, 0);
         transform.position = transform.position + transform.forward * (currentSpeed * Time.deltaTime);
+
+        WeelRotation.z += MaxSpeed * currentSpeed * Time.deltaTime;
+        if (_rotation != 0)
+        {
+            WeelRotation.y = Mathf.Clamp( WeelRotation.y + _rotation, -30, 30);
+        }
+        else
+        {
+            WeelRotation.y = Mathf.Lerp(WeelRotation.y, 0, Time.deltaTime);
+        }
+
+        FL.localEulerAngles = WeelRotation;
+        FR.localEulerAngles = WeelRotation;
+
+        Vector3 _newRotation = WeelRotation;
+        _newRotation.y = 0;
+
+        RR.localEulerAngles = _newRotation;
+        RL.localEulerAngles = _newRotation;
     }
 
     private void OnMovePerformed(InputAction.CallbackContext _obj)
